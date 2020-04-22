@@ -1,0 +1,134 @@
+/* Learn some facts about COVID 19 */
+#include<stdio.h>
+int main()
+{
+  char countryorstate[20];
+  int no,cases,no2;
+  int deaths,recovered;
+  printf("    COVID 19    \n");
+  printf("press 1. Learn some facts about COVID 19\n");
+  printf("press 2. Protective measures\n");
+  printf("press 3. Covid rate\n");
+  scanf("%d",&no);
+  if(no==1)
+  {
+    printf("press 1. What is Covid 19?\n");
+    printf("press 2. Modes of transmission\n");
+    printf("press 3. Symptoms\n");
+    scanf("%d",&no2);
+    if(no2==1)
+    {
+      printf(" ",facts());
+    }
+    else if(no2==2)
+    {
+      printf(" ",modes());
+    }
+    else if(no2==3)
+    {
+      printf(" ", symptoms());
+    }
+  }
+  else if(no==2)
+  {
+    printf(" ",protectivemeasures());
+  }
+  else if(no==3)
+  {
+    printf("Enter country or state\n"); 
+    scanf("%s",&countryorstate);
+    printf("Enter Total cases\n");
+    scanf("%d",&cases);
+    printf("Enter total deaths\n");
+    scanf("%d",&deaths);
+    printf("Enter total recovered\n");
+    scanf("%d",&recovered);
+    printf("     COVID 19   \n");
+    printf("Today's report in %s:\n",countryorstate);
+    printf(" ",rate(cases,deaths,recovered));
+  }
+  return 0;
+}
+int facts()
+{
+  int no3;
+  printf("       COVID 19  \n");
+  printf("Covid 19 is an infectious disease caused by the most recently recovered coronavirus SARS-Cov-2.\n");
+  printf("This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.\n");
+  printf("Corona viruses are a large family of viruses that cause illness ranging from common cold to more severe\n");
+  printf("diseases such as Middle East Respiratory syndrome(MERS-Cov) and Severe Acute Respiratory Syndrome(SARS-CoV).\n");
+  printf("To date there are no specific vaccines or medicines for COVID 19. Scientists are working hard to\n");
+  printf("understand this new virus and produce a vaccine.\n");
+  printf("The World Health Organization declared the outbreak to be a 'Public Health Emergency of International Concern' \n");
+  printf("on 30 January 2020, and recognised it as a pandemic on 11 March 2020.\n");
+  printf("\n\n  Enter 2 to read modes of transmission \n");
+  scanf("%d",&no3);
+    if(no3==2)
+       {
+        return modes();
+       }
+}
+int modes()
+{
+  int no4;
+  printf("\nPeople can catch COVID-19 from others who have the virus.\n");
+  printf("The disease can spread from person to person through small droplets\n");
+  printf("from the nose or mouth which are spread when a person with COVID-19 coughs or exhales.\n");
+  printf("These droplets land on objects and surfaces around the person. Other people then catch\n");
+  printf("COVID 19 by touching these objects or surfaces, then touching their eyes, nose or mouth.\n"); 
+  printf("People can also catch COVID-19 if they breathe in droplets from a person with COVID-19 who\n");
+  printf("coughs out or exhales droplets. This is why it is important to stay more than 1 meter (3 feet)\n");
+  printf("away from a person who is sick.\n");
+  printf("\n Enter 3 to read symptoms\n");
+  scanf("%d",&no4);
+      if(no4==3)
+      {
+        return symptoms();
+      }
+}
+int symptoms()
+{
+  printf("COVID-19 affects different people in different ways.\n"); 
+  printf("Most infected people will develop mild to moderate symptoms.\n");
+  printf("\nCommon symptoms:\n");
+  printf(" -fever\n -tiredness\n -dry cough\n");
+  printf("\nSome people may experience:\n");
+  printf(" -aches and pains\n -nasal congestion\n -runny nose\n");
+  printf(" -sore throat\n -diarrhoea\n");
+  printf("\nOn average it takes 5-6 days from when someone is infected with the virus for\n");
+  printf("symptoms to show. however it can take up to 14 days.");
+  printf("\n!!!Seek medical help if you have a fever, a cough and difficulty in breathing!!!\n");
+}
+int protectivemeasures()
+{
+  printf("\n   Protective Measures  \n");
+  printf("1. Wash your hands frequently.\n");
+  printf("2. Maintain social distancing.\n");
+  printf("3. Avoid touching eyes,nose and mouth.\n");
+  printf("4. Practice respiratory hygiene.\n");
+  printf("5. If you have fever, cough and difficulty breathing seek medical help early. \n");
+  printf("6. Stay informed and follow advice given by your healthcare provider.\n");
+  printf("!!!!Stay home Stay safe!!!!\n");
+  return 0;
+}
+float deathrate(float a,float b)
+{
+  float deathrate;
+  deathrate=a/b*100;
+  return deathrate;
+}
+float recoveryrate(float c, float b)
+{
+  float recoveryrate;
+  recoveryrate =c/b*100;
+  return recoveryrate;
+}
+int rate(p,q,r)
+{
+  printf("Total cases: %d\n",p);
+  printf("Total deaths: %d\n",q);
+  printf("Total recoveries: %d\n",r);
+  printf("Death rate: %f%\n",deathrate(q,p));
+  printf("Recovery rate: %f%\n",recoveryrate(r,p));
+  return 0;
+}
