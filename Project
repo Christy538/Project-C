@@ -107,7 +107,7 @@ int protectivemeasures()
   printf("3. Avoid touching eyes,nose and mouth.\n");
   printf("4. Practice respiratory hygiene.\n");
   printf("5. If you have fever, cough and difficulty breathing seek medical help early. \n");
-  printf("6. Stay informed and follow advice given by your healthcare provider.\n");
+  printf("6. Stay informed and follow advice given by your healthcare provider. \n");
   printf("!!!!Stay home Stay safe!!!!\n");
   return 0;
 }
