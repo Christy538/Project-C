@@ -99,7 +99,7 @@ int symptoms()
   printf("symptoms to show. however it can take up to 14 days.");
   printf("\n!!!Seek medical help if you have a fever, a cough and difficulty in breathing!!!\n");
 }
-int protectivemeasures()
+void protectivemeasures()
 {
   printf("\n   Protective Measures  \n");
   printf("1. Wash your hands frequently.\n");
@@ -109,7 +109,7 @@ int protectivemeasures()
   printf("5. If you have fever, cough and difficulty breathing seek medical help early. \n");
   printf("6. Stay informed and follow advice given by your healthcare provider.\n");
   printf("!!!!Stay home Stay safe!!!! \n");
-  return 0;
+
 }
 float deathrate(float a,float b)
 {
