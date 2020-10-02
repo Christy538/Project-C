@@ -35,7 +35,7 @@ int main()
   }
   else if(no==3)
   {
-    printf("Enter country or state\n"); 
+    printf("Enter Country or State Name\n"); 
     scanf("%s",&countryorstate);
     printf("Enter Total cases\n");
     scanf("%d",&cases);
@@ -99,7 +99,7 @@ int symptoms()
   printf("symptoms to show. however it can take up to 14 days.");
   printf("\n!!!Seek medical help if you have a fever, a cough and difficulty in breathing!!!\n");
 }
-void protectivemeasures()
+int protectivemeasures()
 {
   printf("\n   Protective Measures  \n");
   printf("1. Wash your hands frequently.\n");
@@ -109,7 +109,7 @@ void protectivemeasures()
   printf("5. If you have fever, cough and difficulty breathing seek medical help early. \n");
   printf("6. Stay informed and follow advice given by your healthcare provider.\n");
   printf("!!!!Stay home Stay safe!!!! \n");
-
+  return 0;
 }
 float deathrate(float a,float b)
 {
