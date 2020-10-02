@@ -35,7 +35,7 @@ int main()
   }
   else if(no==3)
   {
-    printf("Enter country or state\n"); 
+    printf("Enter Country or State Name\n"); 
     scanf("%s",&countryorstate);
     printf("Enter Total cases\n");
     scanf("%d",&cases);
